@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/register" component={Register}/>
           <Route exact path="/login" component={Login}/>
           <Route exact path="/movies" component={MovieGrid}/>
-          <Route exact path="/movie/:id" component={MovieDetail}/>
+          <Route exact path="/movie/:id/:name" component={MovieDetail}/>
           <Route exact path="/tv/:id" component={TvDetail}/>
         </Switch>
       </Router>

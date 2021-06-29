@@ -12,7 +12,7 @@ const MovieGridView = (props) => {
     const [movies, setMovies] = useState([])
     const [genres, setGenres] = useState([])
     const history = useHistory()
-
+    const myloginData = JSON.parse(localStorage.getItem('myloginData'));
     const useStyleCard = {
         width: '18rem',
         margin: '0em 1em 1em 1em',
@@ -65,6 +65,7 @@ const MovieGridView = (props) => {
 
     return (
         <React.Fragment>
+            {/* <Header myloginData={myloginData}/> */}
             <Header/>
             <Container>
                 <h4 className="mt-3 mb-3">Popular Movies</h4>

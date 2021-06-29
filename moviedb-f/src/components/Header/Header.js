@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
+    // const myloginData = props.myloginData
     const myloginData = JSON.parse(localStorage.getItem('myloginData'));
     const logout = () => {
         localStorage.clear();

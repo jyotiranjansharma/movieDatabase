@@ -49,10 +49,10 @@ const MovieCarousel = () => {
         getMovies();
     }, [])
 
-    const movieDetail = (id) => () => {
+    const movieDetail = (id, name) => () => {
         if(id) {
             history.push({
-                pathname: `/movie/${id}`,
+                pathname: `/movie/${id}/${name}`,
             })
         }
     }
@@ -72,7 +72,7 @@ const MovieCarousel = () => {
                         outsideChevron
                         chevronWidth={chevronWidth} className="movieCarousel">
                         {movies.map((movie) => (
-                            <Card style={{ width: '14rem', cursor: 'pointer' }} key={(movie._id).toString()} onClick={movieDetail(movie._id)}>
+                            <Card style={{ width: '14rem', cursor: 'pointer' }} key={(movie.id).toString()} onClick={movieDetail(movie.id, movie.title)}>
                                 <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w200/` + movie.poster_path} style={{minHeight: 335}}/>
                                 <Card.Body >
                                     <Card.Title><h6 style={{overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'}}>{movie.original_title}</h6></Card.Title>
