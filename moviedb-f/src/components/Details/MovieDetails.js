@@ -31,7 +31,7 @@ const MovieDetail = () => {
                         </Col>
                         <Col sm={3}>
                             <h5 className="text-uppercase">{movie.title}</h5>
-                            <h6>Status </h6> {movie.status}
+                            <h6>Status Now </h6> {movie.status}
                             <h6>Released On: </h6>{dateFormat(movie.release_date, "mmmm dS, yyyy")}
                             <h6>Runtime </h6> {movie.runtime} Mins
                             <h6>Language</h6> {movie.original_language}
