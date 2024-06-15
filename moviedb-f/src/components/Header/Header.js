@@ -23,7 +23,7 @@ const Header = (props) => {
                         <Nav className="me-auto">
                             <NavLink className="nav-link" to="/movies">Movies</NavLink>
                             <NavLink className="nav-link" to="/tvshows">TV Shows</NavLink>
-                            <NavLink className="nav-link" to="/people">People</NavLink>
+                            <NavLink className="nav-link" to="/people">TV People</NavLink>
                         </Nav>
                         <Nav>
                             {myloginData ? <NavDropdown title={`Hi, ${myloginData.userInfo ? myloginData.userInfo.username : ''}`} id="collasible-nav-dropdown">
